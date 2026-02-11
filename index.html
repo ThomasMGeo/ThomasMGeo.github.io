@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas Martin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #111113;
+      --bg-subtle: #18181b;
+      --text: #ececef;
+      --text-muted: #a1a1aa;
+      --accent: #6d9fff;
+      --accent-hover: #93b8ff;
+      --card-bg: #18181b;
+      --card-hover: #1e1e22;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fafafa;
+        --bg-subtle: #f4f4f5;
+        --text: #18181b;
+        --text-muted: #71717a;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --card-bg: #ffffff;
+        --card-hover: #fafafa;
+        --border: rgba(0, 0, 0, 0.08);
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    header {
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    section > p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 520px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      display: block;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      transition: background 0.15s ease, transform 0.15s ease;
+      color: var(--text);
+    }
+
+    .card:hover {
+      background: var(--card-hover);
+      transform: translateY(-1px);
+      color: var(--text);
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .publications li {
+      list-style: none;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .publications li span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 0.15rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Thomas Martin</h1>
+    <p>Senior Data Scientist @ <a href="https://www.durin.com/">Durin Mining Technologies</a></p>
+    <p>El Segundo, CA</p>
+    <p><a href="ThomasMartinCV_Feb26.pdf">CV (PDF)</a></p>
+  </header>
+
+  <section>
+    <h2><strong>About</strong></h2>
+    <p>
+      PhD geoscientist working at the intersection of machine learning
+      and earth science. I build ML pipelines for subsurface data,
+      drilling tech, and geological systems, including computer vision
+      and LLM-augmented workflows. Background in geophysics (EM, seismic)
+      with prior roles at NSF Unidata, Leidos/NETL, Equinor, and
+      Colorado School of Mines, where I also taught graduate data science
+      courses. Experienced with multi-dimensional data, atmospheric
+      analysis, and the Pangeo stack (Zarr, Xarray). Day-to-day tools
+      include Python (scikit-learn, PyTorch, XGBoost, CatBoost) with
+      experience in deep learning (CNNs, sequence models). Recently
+      getting into Rust. 100+ followers on
+      <a href="https://github.com/ThomasMGeo">GitHub</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/ThomasMGeo/OxidizedOccam" class="card">
+        <h3>OxidizedOccam</h3>
+        <p>Rust Occam Inversion project.</p>
+      </a>
+      <a href="https://github.com/ThomasMGeo/CheckmateSample" class="card">
+        <h3>CheckmateSample</h3>
+        <p>A small utility repo for checkerboard sampling.</p>
+      </a>
+      <a href="https://github.com/ThomasMGeo/LewisML" class="card">
+        <h3>LewisML</h3>
+        <p>Machine Learning models of Lewis Fm.</p>
+      </a>
+      <a href="https://github.com/ThomasMGeo/T21-well-data-bonanza" class="card">
+        <h3>T21-well-data-bonanza</h3>
+        <p>Software Underground Transform 2021 talk on well data. All doable using Google Colab.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Publications</h2>
+    <ul class="publications">
+      <li>
+        <a href="https://doi.org/10.1002/dep2.278">Lateral heterogeneity of basin-plain turbidites of the Cloridorme Formation, Quebec, Canada</a>
+        <span>The Depositional Record, 2024</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.1029/2023EA003364">Increasing the reproducibility and replicability of supervised AI/ML in the Earth systems science by leveraging social science methods</a>
+        <span>Earth and Space Science, 2024</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.3389/feart.2023.1227075">Machine Learning Reveals Trends and Influential Factors in an Arid Groundwater System</a>
+        <span>Frontiers in Earth Science, 2023</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.2110/sedred.2023.2.3">Digitalization of legacy datasets and machine learning regression yields insights for reservoir property prediction and submarine-fan evolution</a>
+        <span>The Sedimentary Record, 2022</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.3389/feart.2021.659611">Centimeter-Scale Lithology and Facies Prediction in Cored Wells Using Machine Learning</a>
+        <span>Frontiers in Earth Science, 2021</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.1016/j.geothermics.2019.101798">Play Fairway analysis of geothermal resources across the State of Hawai'i: 4. Updates with new groundwater chemistry, subsurface stress analysis, and focused geophysical surveys</a>
+        <span>Geothermics, 2020</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.21105/joss.01969">CoreBreakout: Subsurface Core Images to Depth-Registered Datasets</a>
+        <span>Journal of Open Source Software, 2020</span>
+      </li>
+      <li>
+        <a href="https://doi.org/10.1190/INT-2016-0097.1">Reservoir properties prediction integrating controlled-source electromagnetic, prestack seismic, and well-log data using a rock-physics framework</a>
+        <span>Interpretation, 2017</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="https://github.com/ThomasMGeo">GitHub</a>
+    <a href="https://x.com/ThomasM_geo">X / Twitter</a>
+  </footer>
+
+</body>
+</html>
